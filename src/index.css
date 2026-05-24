@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+  cursor: none;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.Modernfont {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.MainFont {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  letter-spacing: -0.02em;
+}
+
+.ElegantFont {
+  font-family: "Modern Antiqua", serif;
+  font-style: normal;
+}
+
+#c-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(255, 0, 0, 0.9);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+#c-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  border: 0.5px solid rgba(255, 0, 0, 0.9);
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+}
+
+@property --neon-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.menu-neon-ring {
+  background: conic-gradient(from var(--neon-angle),
+      transparent 0%,
+      rgba(255, 25, 50, 0) 25%,
+      rgba(255, 25, 50, 0.85) 48%,
+      rgba(255, 100, 115, 1) 52%,
+      rgba(255, 25, 50, 0.85) 56%,
+      rgba(255, 25, 50, 0) 75%,
+      transparent 100%);
+}
+
+#smooth-wrapper {
+  overflow: hidden;
+}
+
+#smooth-content {
+  will-change: transform;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari */
+}
+
+/* Scrollbar roja custom (position:fixed, no ocupa layout) */
+#custom-scrollbar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 4px;
+  height: 100vh;
+  z-index: 9997;
+  background: transparent;
+  pointer-events: none;
+}
+
+#custom-scrollbar-thumb {
+  position: absolute;
+  right: 0;
+  width: 4px;
+  background: rgba(255, 0, 0, 0.85);
+  border-radius: 2px;
+  pointer-events: none;
+  will-change: transform, height;
+}
+
