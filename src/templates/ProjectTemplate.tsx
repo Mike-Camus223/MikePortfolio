@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useRef, useState, useCallback } from "react";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { Mouse, ChevronRight } from "lucide-react";
 import BackendIcon from "../components/icons-backend/icons-backend";
@@ -1090,8 +1090,6 @@ export default function ProjectPage() {
       <nav ref={sideDotsRef} className="absolute right-14 top-1/2 -translate-y-1/2 z-[20]" style={{ opacity: 0 }}>
         <ul className="relative flex flex-col gap-[6px] items-center">
           {(() => {
-            const SLOT_H = 16, GAP = 6;
-            const y = wheelPos.current * (SLOT_H + GAP) - 4;
             return (
               <div
                 ref={sideDotIndicatorRef}

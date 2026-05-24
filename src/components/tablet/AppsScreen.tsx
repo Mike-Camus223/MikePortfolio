@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { ChevronLeft, FolderDot, User, CodeXml, Mail, Calculator, Rabbit, FileText } from "lucide-react";
 import { MenuIcon } from "./MenuIcon";
 import { tabletAnimationRouting } from "./tablet_utils/tablet_animation_routing";
-import { tabletAnimationLink } from "./tablet_utils/tablet_animation_link_spa";
 
 type AppsScreenProps = { 
   visible: boolean; 
